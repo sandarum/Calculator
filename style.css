@@ -1,0 +1,100 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4 {
+	line-height: 1.;
+}
+
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+dt,
+dd,
+figure {
+  margin: 0;
+}
+
+
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+
+ul [class],
+ol [class] {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+body {
+	line-height: 1.6;
+}
+
+.container {
+    border: 1px solid purple;
+    width: 20rem;
+    margin: 10rem auto;
+    padding: 0.5rem;
+
+}
+
+.calclulator-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+}
+
+.calclulator-grid > * {
+    height: 4rem;
+}
+
+.calclulator-grid > *:first-child{
+    grid-column: span 4;
+    height: 4rem;
+    border: 1px solid black;
+}
+
+.calclulator-grid > #clear-btn {
+    grid-column: span 2;
+}
+
+.calclulator-grid > #num0-btn{
+    grid-column: span 2;
+}
+
+.output {
+    padding: 1rem;
+    text-align: right;
+    font-size: 30px;
+}
+
+footer {
+    text-align: center;
+}
