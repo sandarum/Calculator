@@ -1,8 +1,6 @@
 const currentOperation = document.querySelector('.currentOperation');
 const previousOperation = document.querySelector('.previousOperation');
 const buttons = document.querySelectorAll('.btn');
-const numberKeys = document.querySelectorAll('button[data-number]');
-const operatorKeys = document.querySelectorAll('button[data-operator]');
 
 let currentNumber = '';
 let previousNumber = '';
