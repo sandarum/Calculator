@@ -81,11 +81,7 @@ body {
     border: 1px solid black;
 }
 
-.calclulator-grid > #clear-btn {
-    grid-column: span 2;
-}
-
-.calclulator-grid > #num0-btn{
+.span {
     grid-column: span 2;
 }
 

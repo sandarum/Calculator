@@ -1,5 +1,8 @@
 const currentOperation = document.querySelector('.currentOperation');
 const previousOperation = document.querySelector('.previousOperation');
+const buttons = document.querySelectorAll('.btn');
+const numberKeys = document.querySelectorAll('button[data-number]');
+const operatorKeys = document.querySelectorAll('button[data-operator]');
 
 let currentNumber = '';
 let previousNumber = '';
@@ -89,9 +92,11 @@ function compute(){
             result = substract(prev, current);
             break;
         case '×':
+        case '*':
             result = multiply(prev, current);
             break;
         case '÷':
+        case '/':
             result = divide(prev, current);
             break;
         default:
@@ -120,7 +125,6 @@ function setOperator(operator) {
 
 setCurrentDisplay('0');
 
-buttons = document.querySelectorAll('.btn');
 buttons.forEach(button => button.addEventListener('click', () => {
     if(!Number.isNaN(Number(button.textContent))){
         appendNumber(button.textContent);
@@ -146,3 +150,18 @@ buttons.forEach(button => button.addEventListener('click', () => {
     }
 }));
 
+window.addEventListener('keydown', button => {
+    if(0 <= button.key && 9 >= button.key ){
+        appendNumber(button.key);
+    }else if(button.key === "."){
+        appendDot();
+    }else if(button.key === "="){
+        setOperator(undefined);
+        updateDisplay(currentNumber, previousNumber);
+    }else if(button.key === "Backspace"){
+        deleteValue();
+    }else if(button.key === "+" || button.key === "-" || button.key === "*" || button.key === "/"){
+        setOperator(button.key);
+        updateDisplay(currentNumber, previousNumber);
+    }
+});
