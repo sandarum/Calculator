@@ -102,6 +102,7 @@ function compute(){
         default:
             return;
     }
+    result = Math.round(result * 1000000000) / 1000000000;
     currentNumber = result;
     console.log(`Result: ${result}`);
     previousNumber = '';
