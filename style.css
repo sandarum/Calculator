@@ -55,21 +55,24 @@ select {
 
 body {
 	line-height: 1.6;
+    background-color: rgb(142, 205, 221);
 }
 
 .container {
-    border: 1px solid purple;
+    /* border: 1px solid purple; */
+    border-radius: 8px;
     width: 20rem;
     margin: 10rem auto;
-    padding: 0.5rem;
+    padding: 0.8rem;
     line-height: 1.1;
+    background-color: rgb(34, 102, 141);
 
 }
 
 .calclulator-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 0.5rem;
+    gap: 0.2rem;
 }
 
 .calclulator-grid > * {
@@ -86,11 +89,13 @@ body {
 }
 
 .output {
-    padding: 1rem;
+    padding: 0.5rem;
+    margin-bottom: 0.7rem;
     text-align: right;
     font-size: 2rem;
     word-wrap: break-word;
     height: min-content;
+    background-color: rgb(255, 250, 221);
 }
 
 .previousOperation {
@@ -104,4 +109,14 @@ body {
 
 footer {
     text-align: center;
+}
+
+button{
+    border-radius: 5px;
+    background-color: rgb(255, 204, 112);
+    font-weight: 400;
+}
+
+button:hover{
+    background-color: rgb(255, 230, 184);
 }
